@@ -27,28 +27,49 @@
 	const ul = document.querySelector('ul');
 	const empty = document.querySelector('.empty');
 	addBtn.addEventListener('click', (e) => {
+		e.preventDefault();
+		const text = input.value;
 		
-			e.preventDefault();
-			const text = input.value;
-				if( text != ""){
-					const li = document.createElement('li');
-					const p = document.createElement('p');
-					p.textContent = text;
-					li.appendChild(p);
-					li.appendChild(addDeleteBtn())
+		
+		if( text != ""){
 			
-					ul.appendChild(li);
+			const li = document.createElement('li');
+			const p = document.createElement('p');
+			p.textContent = text;
+			li.appendChild(p);
+			li.appendChild(addDeleteBtn())
 			
-					input.value = "";
-					empty.style.display = "none";
-				}
-				else{
-					console.log('none')
-				}
+			ul.appendChild(li);
+			
+			input.value = "";
+			empty.style.display = "none";
+			
+			localStorage.setItem('tareas', text);
+		}
+		else{
+			
+			console.log(localStorage.getItem('tareas'));
+			const li = document.createElement('li');
+			const p = document.createElement('p');
 
+			p.textContent = text;
+			li.appendChild(p);
+			li.appendChild(addDeleteBtn())
 			
+			ul.appendChild(li);
+			
+			input.value = "";
+			empty.style.display = "none";
+			
+			localStorage.setItem('tareas', text);
+
+
+		}
+		
+		
 		
 	});
+
 	function addDeleteBtn(){
 		const deleteBtn = document.createElement('button');
 		deleteBtn.textContent = 'X';
@@ -66,3 +87,4 @@
 		});
 		return deleteBtn;
 	}
+	

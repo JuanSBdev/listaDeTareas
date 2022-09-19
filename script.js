@@ -30,7 +30,6 @@
 		e.preventDefault();
 		const text = input.value;
 		
-		
 		if( text != ""){
 			
 			const li = document.createElement('li');
@@ -47,21 +46,19 @@
 			localStorage.setItem('tareas', text);
 		}
 		else{
-			
-			console.log(localStorage.getItem('tareas'));
-			const li = document.createElement('li');
-			const p = document.createElement('p');
 
-			p.textContent = text;
+			console.log(localStorage.getItem('tareas'));
+			const li2 = document.createElement('li');
+			const p2 = document.createElement('p');
+
+			p2.textContent = localStorage.getItem(tareas);
 			li.appendChild(p);
 			li.appendChild(addDeleteBtn())
-			
 			ul.appendChild(li);
 			
 			input.value = "";
 			empty.style.display = "none";
-			
-			localStorage.setItem('tareas', text);
+
 
 
 		}

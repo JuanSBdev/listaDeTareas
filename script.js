@@ -41,10 +41,11 @@
 			li.appendChild(addDeleteBtn())
 			
 			ul.appendChild(li);
-			
+			localStorage.setItem('tare', li);
+
 			input.value = "";
 			empty.style.display = "none";
-			
+			console.log();
 		}
 		else{
 
@@ -80,7 +81,7 @@
 			li2.appendChild(p2);
 			li2.appendChild(addDeleteBtn())
 			ul.appendChild(li2);
-			
+			ul.appendChild(localStorage.getItem("tare"));
 			input.value = "";
 			empty.style.display = "none";
 

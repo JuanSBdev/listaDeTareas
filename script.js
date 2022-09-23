@@ -77,7 +77,6 @@
 	}
 	const li2= document.createElement('li');
 			const p2 = document.createElement('p');
-			p2.textContent = localStorage.getItem("tareas");
 			li2.appendChild(p2);
 			li2.appendChild(addDeleteBtn())
 			ul.appendChild(li2);

@@ -1,43 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="style/style.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de Tareas</title>
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <title>ToDo List</title>
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Bungee&family=Sora:wght@300&display=swap" rel="stylesheet">
+    <script src="./script.js" defer></script>
 </head>
 <body>
-    <div class="container">
-        <h1>Lista de tareas</h1>
-        <div class="search">
-            <form action="">
-                <input type="text" placeholder="Agregar tarea..">
-                <button class="btn-add">+</button>
-            </form>
+    <div class="section-todo-list">
+        <h2>To Do List</h2>
+        <div class="input-btn">
+            <input type="text">
+            <button onclick="addTasks()">+</button>
         </div>
-        <div class="li-container">
+        <div class="list-tasks">
             <ul>
-
+                <!-- <li>name of task more content <span>X</span></li>
+                <li>name of task more content <span>X</span></li>
+                <li>name of task more content <span>X</span></li>
+                <li>name of task more content <span>X</span></li> -->
             </ul>
         </div>
-        <div class="empty">
-            <p>No hay tareas pendientes.</p>
-        </div>
+        <button class="remove-all" onclick="deleteAll()">All done!</button>
     </div>
-    <!--<h1>ingresar tarea</h1>
-    <form class="formulario">
-        <input type="text" placeholder="ingrese tarea" autocomplete="off" class="input-uno" id="input-uno">
-        <input onclick="agregarTarea()" type="button" value="+" id="boton-add">  
-          <br>
-
-    </form>
-    <div class="tareas">
-        <h2>Tareas</h2>
-        <ul id="lista">
-        </ul>
-    </div>-->
-    <script src="./script.js"></script>
-
 </body>
 </html>
+<!-- HTML !-->
+

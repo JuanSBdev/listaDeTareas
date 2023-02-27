@@ -45,6 +45,7 @@ body{
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
+  
 }
 .input-btn button:before{
   content: "";

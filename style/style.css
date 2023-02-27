@@ -129,7 +129,7 @@ input-btn button::after{
 
 /*remove all btn*/
 .remove-all{
-  border-radius: none;
+  border-radius: 1rem;
   border-color: #1c06e2;
   background-color: #3550e9;
   color: #fff;
@@ -176,4 +176,12 @@ p.author a {
   text-decoration: none;
   font-weight: 700;
   color: #000;
+}
+.developed{
+  color: #00000046;
+  width: 98%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  top: 90%;
 }
